@@ -23,16 +23,16 @@
 </nav>
 <div class="row">
     <div class="col-4">
-      <ul class="list-group">
+      <ul class="list-group ">
   <li class="list-group-item active" aria-current="true">Country</li>
-        {% for item in ma%}
-        <li class="list-group-item">{{item.title}}</li>
+        {% for item in ma %}
+        <li class="list-group-item"><a href="{% url 'country' item.pk %}">{{item.title}}</a></li>
         {% endfor%}
 </ul>
     </div>
 
     <div class="col-8">
-      {% for item in sh%}
+      {% for item in sh %}
       <div class="card mb-3">
   <div class="row g-0">
     <div class="col-md-4">
@@ -41,8 +41,8 @@
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">{{item.title}}</h5>
-        <p class="card-text">About city</p>
-        <p class="card-text"><small class="text-muted">{{item.created_at}}</small></p>
+        <p class="card-text">About city : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus molestiae odit officia similique! Dolore, enim, quasi. Facilis impedit odio voluptatum? Aliquid at enim magni nemo voluptatem. Assumenda at dolor hic vitae. Beatae, expedita, perferendis? Animi autem commodi ex exercitationem expedita fuga illum, inventore possimus quisquam ratione similique, sint vero.</p>
+        <p class="card-text"><small class="text-muted">{{item.context}}</small></p>
       </div>
     </div>
   </div>
@@ -52,6 +52,7 @@
     </div>
 
 </div>
+
 
 
 
